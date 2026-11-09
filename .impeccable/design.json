@@ -1,0 +1,129 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-08T02:16:00+02:00",
+  "title": "Design System: SRFEC Stones & Granite",
+  "extensions": {
+    "colorMeta": {
+      "granite-navy": {
+        "role": "primary",
+        "displayName": "Granite Navy",
+        "canonical": "#192D4C",
+        "tonalRamp": ["#0F1B2E", "#13233C", "#192D4C", "#223B61", "#34527D", "#5876A1", "#8FA6C7", "#D5DFEE"]
+      },
+      "champagne-gold": {
+        "role": "secondary",
+        "displayName": "Soft Champagne Gold",
+        "canonical": "#C9A96A",
+        "tonalRamp": ["#4A3A1C", "#6B5429", "#8E7038", "#AD8B4E", "#C9A96A", "#DFC692", "#EDE0C2", "#F8F3E8"]
+      },
+      "warm-cream": {
+        "role": "neutral",
+        "displayName": "Warm Cream",
+        "canonical": "#F5F0E6",
+        "tonalRamp": ["#38332A", "#5C5446", "#827866", "#ABA08C", "#CFC6B4", "#E5DECFE", "#F5F0E6", "#FAF8F3"]
+      },
+      "stone-gray": {
+        "role": "neutral",
+        "displayName": "Stone Gray",
+        "canonical": "#E9EAEE",
+        "tonalRamp": ["#2B2E38", "#484D5C", "#686E82", "#8E94A8", "#B5BAC9", "#D2D5DF", "#E9EAEE", "#F3F4F6"]
+      },
+      "pure-white": {
+        "role": "neutral",
+        "displayName": "Pure White",
+        "canonical": "#FFFFFF",
+        "tonalRamp": ["#192D4C", "#34527D", "#5876A1", "#8FA6C7", "#C2CFE2", "#E9EAEE", "#F5F0E6", "#FFFFFF"]
+      }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display Serif", "purpose": "Hero headline in Playfair Display (EN) and Amiri (AR)." },
+      "headline": { "displayName": "Section Headline", "purpose": "Section h2 headings paired with the 120px gold underline." },
+      "title": { "displayName": "Card Title", "purpose": "Milestone, value, and project card headings." },
+      "body": { "displayName": "Body Sans", "purpose": "Calm editorial copy in Poppins (EN) and IBM Plex Sans Arabic (AR)." },
+      "label": { "displayName": "Technical Label", "purpose": "Project codes, secondary bilingual titles, and form labels." }
+    },
+    "shadows": [
+      { "name": "shadow-navy-sm", "value": "0 8px 24px -6px rgba(25, 45, 76, 0.08)", "purpose": "Resting card and header elevation." },
+      { "name": "shadow-navy-md", "value": "0 16px 38px -10px rgba(25, 45, 76, 0.14)", "purpose": "Card hover and primary CTA elevation." },
+      { "name": "shadow-navy-lg", "value": "0 24px 56px -12px rgba(25, 45, 76, 0.24)", "purpose": "Hero slab frame and dark navy feature containers." }
+    ],
+    "motion": [
+      { "name": "ease-editorial", "value": "cubic-bezier(0.22, 1, 0.36, 1)", "purpose": "Exponential ease-out for scroll reveals and underline expansion." }
+    ],
+    "breakpoints": [
+      { "name": "sm", "value": "640px" },
+      { "name": "md", "value": "768px" },
+      { "name": "lg", "value": "1024px" },
+      { "name": "xl", "value": "1280px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Action Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Granite Navy pill CTA with Champagne Gold directional arrow.",
+      "html": "<button class=\"ds-btn-primary\"><span>Explore Our Work</span><svg width=\"16\" height=\"16\" viewBox=\"0 0 20 20\" fill=\"none\"><path d=\"M4.167 10h11.666m0 0L10.833 5m5 5-5 5\" stroke=\"#C9A96A\" stroke-width=\"1.75\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></button>",
+      "css": ".ds-btn-primary { display: inline-flex; align-items: center; gap: 12px; background: #192D4C; color: #FFFFFF; padding: 16px 28px; border-radius: 9999px; font-weight: 500; font-size: 16px; border: none; box-shadow: 0 16px 38px -10px rgba(25, 45, 76, 0.14); transition: background 0.2s, transform 0.2s; cursor: pointer; } .ds-btn-primary:hover { background: #223B61; transform: translateY(-2px); } .ds-btn-primary:focus-visible { outline: 2px solid #C9A96A; outline-offset: 3px; }"
+    },
+    {
+      "name": "Secondary Outline Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "2px Granite Navy outline pill button for secondary actions.",
+      "html": "<button class=\"ds-btn-secondary\">Contact Us</button>",
+      "css": ".ds-btn-secondary { display: inline-flex; align-items: center; gap: 12px; background: #FFFFFF; color: #192D4C; padding: 14px 28px; border-radius: 9999px; font-weight: 500; font-size: 16px; border: 2px solid #192D4C; transition: background 0.2s, transform 0.2s; cursor: pointer; } .ds-btn-secondary:hover { background: #F5F0E6; transform: translateY(-2px); } .ds-btn-secondary:focus-visible { outline: 2px solid #C9A96A; outline-offset: 3px; }"
+    },
+    {
+      "name": "Architectural Milestone Card",
+      "kind": "card",
+      "refersTo": "card-surface",
+      "description": "24px rounded card with Granite Navy number badge and expanding Champagne Gold rule.",
+      "html": "<article class=\"ds-card\"><div class=\"ds-card-head\"><div><h3 class=\"ds-card-title\">Beginning &amp; Experience</h3><p class=\"ds-card-sub\">البداية والخبرة</p></div><div class=\"ds-card-num\">01</div></div><p class=\"ds-card-body\">Over 40 years of experience in the contracting sector and more than 1,000 completed projects.</p><span class=\"ds-card-rule\"></span></article>",
+      "css": ".ds-card { background: #FFFFFF; color: #192D4C; border: 1px solid #E9EAEE; border-radius: 24px; padding: 32px; box-shadow: 0 8px 24px -6px rgba(25, 45, 76, 0.08); transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s; } .ds-card:hover { transform: translateY(-4px); box-shadow: 0 16px 38px -10px rgba(25, 45, 76, 0.14); border-color: #C9A96A; } .ds-card-head { display: flex; justify-content: space-between; align-items: flex-start; padding-bottom: 20px; border-bottom: 1px solid rgba(25, 45, 76, 0.1); } .ds-card-title { font-size: 24px; font-weight: 700; margin: 0; } .ds-card-sub { font-size: 12px; color: rgba(25, 45, 76, 0.65); margin: 4px 0 0; } .ds-card-num { width: 52px; height: 52px; border-radius: 16px; background: #192D4C; color: #C9A96A; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 20px; } .ds-card-body { margin-top: 20px; font-size: 16px; line-height: 1.65; color: rgba(25, 45, 76, 0.85); } .ds-card-rule { display: block; margin-top: 20px; height: 2px; width: 48px; background: #C9A96A; }"
+    },
+    {
+      "name": "Inquiry Form Field",
+      "kind": "input",
+      "refersTo": "input-field",
+      "description": "Form input field in warm cream with Granite Navy focus border and Champagne Gold focus ring.",
+      "html": "<input class=\"ds-input\" type=\"text\" placeholder=\"Enter your full name or company name\" />",
+      "css": ".ds-input { width: 100%; border-radius: 12px; border: 1px solid rgba(25, 45, 76, 0.2); background: rgba(245, 240, 230, 0.4); padding: 14px 16px; font-size: 14px; color: #192D4C; transition: border-color 0.2s, background 0.2s; } .ds-input:focus { border-color: #192D4C; background: #FFFFFF; outline: 2px solid #C9A96A; outline-offset: 2px; }"
+    },
+    {
+      "name": "Bilingual Language Switcher",
+      "kind": "nav",
+      "refersTo": "lang-switcher",
+      "description": "Segmented pill switcher toggling Arabic RTL and English LTR.",
+      "html": "<div class=\"ds-lang\"><button class=\"ds-lang-active\">AR</button><button class=\"ds-lang-inactive\">EN</button></div>",
+      "css": ".ds-lang { display: inline-flex; align-items: center; border-radius: 9999px; border: 1px solid rgba(25, 45, 76, 0.15); background: #F5F0E6; padding: 2px; font-size: 12px; } .ds-lang-active { background: #192D4C; color: #FFFFFF; font-weight: 600; padding: 6px 12px; border-radius: 9999px; border: none; } .ds-lang-inactive { background: transparent; color: rgba(25, 45, 76, 0.75); padding: 6px 12px; border-radius: 9999px; border: none; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "Measured Frame & Flowing Vein",
+    "overview": "The SRFEC visual system embodies the tension and harmony between rigid industrial engineering (the square frame of measurement, calibration, sawing, and architectural tolerances) and organic geological beauty (the flowing white and gold veins inside natural stone). Surfaces are spacious, calm, and editorial, alternating between Pure White, Warm Cream, and full Granite Navy bands so the craftsmanship and stone imagery carry the authority.",
+    "keyCharacteristics": [
+      "Zero-black material palette anchored in Granite Navy (#192D4C), Soft Champagne Gold (#C9A96A), and Warm Cream (#F5F0E6).",
+      "Bilingual typographic parity pairing Playfair Display + Poppins (LTR) with Amiri + IBM Plex Sans Arabic (RTL).",
+      "Signature 120px (3px high) Champagne Gold underline beneath every section heading.",
+      "Generous 24px (rounded-[24px]) architectural card geometry with navy-tinted elevation shadows.",
+      "Horizontally fading <BrandPattern /> texture at 6.5%–7% opacity paired with slow-drifting organic stone-vein contours."
+    ],
+    "rules": [
+      { "name": "The Zero-Black Rule", "body": "Never use #000000, rgb(0,0,0), or pure black anywhere in text, borders, icons, or box-shadows. Wherever a dark value is required, use Granite Navy (#192D4C).", "section": "colors" },
+      { "name": "The Gold Contrast Rule", "body": "Because Champagne Gold (#C9A96A) has low contrast against white, never use small gold body text on white or cream backgrounds.", "section": "colors" },
+      { "name": "The Unkicked Heading Rule", "body": "Section headings never carry a small uppercase eyebrow or kicker above them; the serif h2 leads directly and is anchored below by the 120px gold rule.", "section": "typography" }
+    ],
+    "dos": [
+      "Do use Granite Navy (#192D4C) for all dark text, dark backgrounds, image overlays, and shadow tints.",
+      "Do place the 120px Champagne Gold underline (3px height) directly beneath every section h2 heading.",
+      "Do use Tailwind logical properties (ms-, me-, ps-, pe-, start-, end-, text-start) and rtl:rotate-180 on directional arrows."
+    ],
+    "donts": [
+      "Don't use #000000 or pure black anywhere in CSS, SVGs, or shadows.",
+      "Don't render small Champagne Gold text directly on white or cream backgrounds.",
+      "Don't redraw or alter the official SRFEC brand symbol or use exclamation marks and sales superlatives in copy."
+    ]
+  }
+}
+
