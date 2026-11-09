@@ -6,7 +6,7 @@ Bilingual (Arabic RTL default `/ar` + English LTR `/en`) multi-page corporate we
 
 ## 1. Site Map & Multi-Page Architecture
 
-All routes are statically generated for both Arabic (`/ar/...`, RTL default) and English (`/en/...`, LTR) via `generateStaticParams`. Visiting `/` automatically redirects to `/ar` via `src/middleware.ts` and `next.config.mjs`. Switching languages in the header preserves the current page route (e.g., `/ar/about` ↔ `/en/about`).
+All routes are statically generated for both Arabic (`/ar/...`, RTL default) and English (`/en/...`, LTR) via `generateStaticParams`. Visiting `/` automatically redirects to `/ar` via `src/proxy.ts` and `next.config.mjs`. Switching languages in the header preserves the current page route (e.g., `/ar/about` ↔ `/en/about`).
 
 | Route | Page | Source File | Content & Data Source |
 |---|---|---|---|
@@ -67,5 +67,5 @@ This repository uses the standard Next.js App Router build and requires **no `ve
 - **Projects Portfolio & Slugs:** [`src/data/projects.ts`](./src/data/projects.ts)
 - **Client Logos List:** [`src/data/clients.ts`](./src/data/clients.ts)
 - **Contact Details, Social Links & Feature Flags:** [`src/data/site-config.ts`](./src/data/site-config.ts)
-- **Official Logo SVGs:** Drop into `/public/brand/` (`srfec-logo-primary.svg`, `srfec-logo-horizontal.svg`, `srfec-symbol.svg`, `srfec-monogram.svg`, plus `-white.svg` and `-mono.svg` variants) and set `brandAssetsReady: true` in [`src/data/site-config.ts`](./src/data/site-config.ts).
-- **Photography & Stone Placeholders:** Replace files in `/public/images/` or update paths in `src/data/site-config.ts` and `src/data/projects.ts`.
+- **Official Brand Logos & Patterns:** Located in `/public/brand/` (`srfec-logo-primary.svg`, `srfec-logo-horizontal.svg`, `srfec-symbol.svg`, `srfec-monogram.svg`, `-white.svg`, `-mono.svg`, `pattern.svg`, `pattern-light.svg`, `pattern-white.svg`, `organic-veins.svg`, `favicon.ico`, `icon.png`, `apple-icon.png`, `og-image.png`).
+- **Photography & Stone Assets:** Located in organized subfolders in `/public/images/` (`hero/`, `factory/`, `projects/`, `stones/`, `clients/`, `ceo/`, `misc/`). See [`/public/images/manifest.json`](./public/images/manifest.json) for asset metadata and [`/public/images/IMAGE-PROMPTS.md`](./public/images/IMAGE-PROMPTS.md) for generation prompts.

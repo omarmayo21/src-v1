@@ -9,6 +9,8 @@ const nextConfig = {
   },
   experimental: {
     webpackBuildWorker: false,
+    staticGenerationRetryCount: 2,
+    staticGenerationMinPagesPerWorker: 50,
   },
   async redirects() {
     return [
