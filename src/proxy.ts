@@ -13,6 +13,8 @@ export function proxy(request: NextRequest) {
     pathname === "/sitemap.xml" ||
     pathname === "/robots.txt" ||
     pathname === "/favicon.ico" ||
+    pathname === "/icon.png" ||
+    pathname === "/apple-icon.png" ||
     pathname.includes(".")
   ) {
     return NextResponse.next();
@@ -35,7 +37,12 @@ export function proxy(request: NextRequest) {
   return NextResponse.redirect(targetUrl);
 }
 
-export const config = {
-  matcher: ["/((?!_next/static|_next/image|brand|images|favicon.ico|sitemap.xml|robots.txt).*)"],
-};
+// Export middleware alias and default export for multi-runtime compatibility
+export const middleware = proxy;
+export default proxy;
 
+export const config = {
+  matcher: [
+    "/((?!_next/static|_next/image|brand|images|api|favicon.ico|icon.png|apple-icon.png|robots.txt|sitemap.xml).*)",
+  ],
+};
